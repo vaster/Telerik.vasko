@@ -1,0 +1,12 @@
+body{background-color:gray}
+h1#center,footer#center{text-align:center}
+h1{color:#EDEA9B}
+li{text-align:center;font-weight:bold}
+a:link#nav,#navDecoration{color:white;}
+a{text-decoration:none}
+a#navDecoration{text-decoration:underline}
+a:link#doncho{color:black}
+a:link.current{background-color:#DADADA}
+
+
+

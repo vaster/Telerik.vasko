@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        //Write functions for working with shapes in  standard Planar coordinate system
+        //Points are represented by coordinates P(X, Y)
+        //Lines are represented by two points, marking their beginning and ending
+        //L(P1(X1,Y1),P2(X2,Y2))
+        //Calculate the distance between two points
+        //Check if three segment lines can form a triangle
+
+        function point(X, Y) {
+            this.X = X;
+            this.Y = Y;
+        }
+
+        function line(pointA, pointB) {
+            this.pointA = pointA;
+            this.pointB = pointB;
+        }
+
+        function calcDistanceBtwPoints(pointA, pointB) {
+            return Math.sqrt(Math.pow((pointB.X - pointA.X), 2) + Math.pow((pointB.Y - pointA.Y), 2));
+        }
+
+
+        var pointA = new point(3, 4);
+        var pointB = new point(5, 6);
+        var distance = calcDistanceBtwPoints(pointA, pointB);
+        jsConsole.writeLine(distance);
+    </script>
+</body>
+</html>

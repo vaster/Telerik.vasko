@@ -1,0 +1,46 @@
+a.blue{
+	color:lightblue;
+}
+div.pageFrame{
+	width:900px;
+	height:780px;
+	border:1px solid black;
+	padding:15px;
+}
+h1{
+	text-align:center;
+	margin-top:-5px;
+}
+div.core{
+	width:75%;
+	height:700px;
+	border:2px solid black;
+}
+fieldset{
+	width:250px;
+	height:200px;
+	border:2px solid black;
+	float:left;
+}
+
+img{
+	width:60%;
+	height:80%;
+}
+fieldset>p{
+	float:right;
+}
+p.Ram{
+	margin-top:-100px;
+}
+p.cpu{
+	margin-top:-65px;
+}
+p.money{
+	margin-right:120px;
+}
+div.rightMenu{
+	float:right;
+	margin-top:-600px;
+	font-size:20px;
+}

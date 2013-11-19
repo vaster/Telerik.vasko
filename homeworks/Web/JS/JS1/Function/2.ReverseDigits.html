@@ -1,0 +1,32 @@
+
+
+
+
+
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title></title>
+        <link href="styles/js-console.css" rel="stylesheet" />
+    </head>
+    <body>
+        	<div id="js-console"></div>
+        <script src="scripts/js-console.js"></script>	
+        <script>
+            //Write a function that reverses the digits of given decimal number. Example: 256 -> 652
+            function reverseDigits(number) {
+                var result;
+                for (var i = 0; i < number.length; i++) {
+
+                    result = result + number.substring(number.length-1-i,number.length-i);
+                }
+
+                return result.replace("undefined","");
+            }
+            var sampleNumber = 653;
+            var numberToString = sampleNumber.toString();
+            jsConsole.writeLine(numberToString +"->"+reverseDigits(numberToString));
+        </script>
+    </body>
+</html>

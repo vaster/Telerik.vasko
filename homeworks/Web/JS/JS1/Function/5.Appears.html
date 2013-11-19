@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        //Write a function that counts how many times given number appears in given array. Write a test function to check if the function is working correctly.
+
+
+        function countOccurences(seekFor, sequenceOfNumbers) {
+            var count = 0;
+            var forfiledConstrains = typeCheker(seekFor);
+            if (forfiledConstrains) {
+                for (var i = 0; i < sequenceOfNumbers.length; i++) {
+                    if (typeCheker(sequenceOfNumbers[i])) {
+                        if (sequenceOfNumbers[i] === seekFor) {
+                            count++;
+                        }
+                    }
+                }
+            }
+            return count;
+        }
+
+        //using this func to be sure we are working with numbers. Thats my check.
+        function typeCheker(variable) {
+            if (typeof (variable) === "number") {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        var array = new Array(1, 5, 12, -6, 0, 100, 5, 3, 5);
+        var seekedNumber = 5;
+        jsConsole.writeLine(seekedNumber + " apears " + countOccurences(seekedNumber, array) + " times" + " in " +"["+ array+"]");
+
+    </script>
+</body>
+</html>

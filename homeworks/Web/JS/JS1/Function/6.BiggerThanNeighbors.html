@@ -1,0 +1,62 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        //Write a function that checks if the element at given position in given array of integers is bigger than its two neighbors (when such exist).
+        function checkNumberValue(searchedIndex, sequence) {
+
+            //diff situtions we may have
+
+            if (searchedIndex > sequence.length) {
+                return false;
+            }
+            if (searchedIndex === sequence.length) {
+                return true;
+            }
+            if (sequence.length === 2) {
+                if (searchedIndex === 0) {
+                    if (sequence[searchedIndex] > sequence[searchedIndex + 1]) {
+                        return true;
+                    }
+                    else {
+                        return false;
+                    }
+                }
+                if (searchedIndex === 1) {
+                    if (sequence[searchedIndex] > sequence[0]) {
+                        return true;
+                    }
+                    else {
+                        return false;
+                    }
+                }
+            }
+            else {
+               
+                if (sequence[searchedIndex] > sequence[searchedIndex - 1] &&
+                    sequence[searchedIndex] > sequence[searchedIndex + 1]) {
+
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+        }
+
+
+        var sequence = new Array(1, 2, 3, 4, 3, 2, 1);
+        var searchedIndex = 3;
+
+        jsConsole.writeLine("Is " +sequence[searchedIndex]+ " in "+"["+sequence+"]"+" bigger than it's neighbors: " + checkNumberValue(searchedIndex,sequence));
+
+    </script>
+</body>
+</html>

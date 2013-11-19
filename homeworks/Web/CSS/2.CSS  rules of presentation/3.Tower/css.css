@@ -1,0 +1,40 @@
+body div#bckg-div{
+	
+	background-color:red;
+	width:1280px;
+	height:120px;
+	border-radius:100px;
+	
+	
+}
+body div#inner1{
+	background-color:black;
+	width:9%;
+	height:90%;
+	float:right;
+	margin-right:0.3%;
+	margin-top:0.4%;
+	border-bottom-right-radius:50px;
+	border-top-right-radius:50px;
+	
+	
+	
+}
+
+body div#inner2{
+	background-color:black;
+	width:94%;
+	margin-top:2.5%;
+	height:95%;
+	float:right;
+	border-bottom:2px solid red; 
+	border-right:2px solid red;
+	margin-right:60%;
+	border-bottom-right-radius:50px;
+	border-top-right-radius:50px;
+	
+	
+}
+ 
+
+

@@ -1,0 +1,2 @@
+All packages are deleted because there are too big and the project is unable to be uploaded to the Telerik Academy system. 
+For the homework the person who will check it will have to install them again trough the NuGet Package manager. 

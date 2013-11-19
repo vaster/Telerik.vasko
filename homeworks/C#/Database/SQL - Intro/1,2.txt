@@ -1,0 +1,18 @@
+What is SQL? What is DML?
+Stands for Structure Query Language. Allowes defining / modifying database schema, searching / modifying table data.
+
+ What is DDL? 
+ Data Definition Language (DDL)
+
+ Recite the most important SQL commands.
+	SELECT
+	INSERT
+	UPDATE
+	SET
+	DELETE
+	JOINs
+	WHERE
+	FROM
+ 
+What is Transact-SQL (T-SQL)?
+Declarative language for query and manipulation of relational data.

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        //Write a program that finds the index of given element in a sorted array of integers by using the binary search algorithm (find it in Wikipedia)
+
+        //sample
+       var seeked = 3;
+       var range;
+       var rangeOne=0;
+       var rangeTwo = 0;
+       var seekedIndex = 0;
+       
+        var sortedSequenceOfInt = new Array(1,2,3,4,5,6,7,8);
+      
+        range = sortedSequenceOfInt.length / 2;
+        
+        
+        if (sortedSequenceOfInt[range] === seeked)
+        {
+            seekedIndex = range;
+
+        }
+        if (sortedSequenceOfInt[range] < seeked)
+        {
+            rangeOne = range + 1;
+            rangeTwo = sortedSequenceOfInt.Length;
+            
+        }
+        if (sortedSequenceOfInt[range] > seeked)
+        {
+            rangeOne = 0;
+            rangeTwo = range;
+            
+        }
+        for (;rangeOne < rangeTwo; rangeOne++)
+        {
+            if (sortedSequenceOfInt[rangeOne] === seeked)
+        {
+                seekedIndex = rangeOne;
+                
+        }
+        }
+
+        jsConsole.writeLine("The idex of " + seeked +" is " + seekedIndex);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        //Write a function that finds all the occurrences of word in a text
+        //The search can case sensitive or case insensitive
+        // Use function overloading
+
+        function findWordCount(word, text, caseSensitive) {
+
+            caseSensitive = caseSensitive || false;
+            var separtor = " ";
+            var arrayOfWords = text.split(separtor);
+            var count = 0;
+
+            function getWordCountSensitive(word,arraysOfWords) {
+                for (var wordIndex = 0; wordIndex < arrayOfWords.length; wordIndex++) {
+                    if (arrayOfWords[wordIndex] === word) {
+                        count++;
+                    }
+                }
+                return count;
+            }
+            function getWordCountInsensitive(word, arraysOfWords) {
+
+                for (var wordIndex = 0; wordIndex < arrayOfWords.length; wordIndex++) {
+                    if (arrayOfWords[wordIndex].toUpperCase() === word.toUpperCase()) {
+                        count++;
+                    }
+                    
+                }
+                return count;
+            }
+
+            switch (caseSensitive) {
+                case false: return getWordCountInsensitive(word,arrayOfWords);
+                case true: return getWordCountSensitive(word,arrayOfWords);
+
+            }
+
+        }
+
+
+
+
+        var sampleText = "It is time for a change . Change for good.";
+        var seekedWord = "change";
+
+        jsConsole.writeLine("'" + seekedWord + "'" + " counts" + " in: " + sampleText + ":" + findWordCount(seekedWord, sampleText) + " times");//you can add 'true' or 'false' as 3rd parameter.
+
+    </script>
+</body>
+</html>

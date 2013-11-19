@@ -1,0 +1,76 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        //Write a program that extracts from a given text all palindromes, e.g. "ABBA", "lamal", "exe".
+        //not finished
+        var inputText;
+        var countWords = 0;
+        var symbols;
+        var coef = 0;
+        var reader;
+        var flag = true; 
+        var storeWords = new Array();
+        
+        function findPalindrome(inputText) {
+
+            
+            for (var i = 0; i < inputText.length; i++) {
+
+                symbols = inputText[i];
+                if (symbols === ' ') {
+
+                    countWords++;
+                }
+            }
+
+            var keepWords = new Array(countWords + 1);
+            //jsConsole.writeLine("xaxa");
+            for (var i = 0; i < inputText.length; i++) {
+                symbols = inputText[i];
+                if (symbols != ' ' && symbols != '.' && symbols != ',' && symbols != '?' && symbols != '!') {
+                    storeWords.push(symbols);
+                }
+                else {
+                    keepWords[coef] = storeWords;
+                    reader = keepWords[coef];
+                    for (var z = 0; z < (keepWords[coef].length) / 2; z++) {
+
+                        if (reader[z] === reader[reader.length - z - 1]) {
+                            flag = true;
+                        }
+                        else {
+                            flag = false;
+                            break;
+                        }
+
+                    }
+                    if (flag) {
+                        jsConsole.writeLine(" is valid: " + reader);
+                    }
+                    else {
+                        jsConsole.writeLine(" is not valid: " + reader);
+                    }
+                    if (!(string.IsNullOrEmpty(storeWords.ToString()))) {
+                        coef++;
+                    }
+                    for (var k = 0; k < storeWords.length; k++) {
+                        storeWords[k] = "";
+                    }
+                }
+            }
+        }
+
+        inputText = "aadaa.";
+        findPalindrome(inputText);
+
+    </script>
+</body>
+</html>

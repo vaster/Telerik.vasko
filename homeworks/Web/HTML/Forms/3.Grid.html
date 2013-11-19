@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			div#header{
+			padding:5px;
+			color:#5B5B5B;background-color:#ededed;
+			width:98.9%;
+			border:1px solid gray;
+			margin-bottom:-1px;
+			border-top-right-radius: 10px;
+			border-top-left-radius: 10px;}
+			
+			td{color:#5B5B5B}
+			input#smallbox{width:20px}
+			input#longbox{width:150px}
+			input#averagebox{width:85px}
+			td#Small{width:100px}
+			td#Average{width:200px}
+			td#Long{width:250px;}
+			td.LightGray{
+				box-shadow:inset 0px 1px 0px 0px #ffffff;
+				background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+				background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+				background-color:#ededed;
+				color:#777777;
+				font-family:arial;
+				font-size:15px;
+				font-weight:bold;
+				padding:6px 24px;
+				text-decoration:none;
+				text-shadow:1px 1px 0px #ffffff;}
+					
+			td.LightBlue{background-color:#DFECF0}
+			div.frame{width:1050px}
+			span{float:right;color:#5B5B5B}
+			input{color:#5B5B5B}
+			a{text-decoration:none;color:#5B5B5B;}
+			a.Onclick{border:2px solid orange}
+			div.footer{box-shadow:inset 0px 1px 0px 0px #ffffff;
+				background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+				background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+				background-color:#ededed;
+				color:#777777;
+				font-family:arial;
+				font-size:15px;
+				font-weight:bold;
+				padding:6px 24px;
+				text-decoration:none;
+				text-shadow:1px 1px 0px #ffffff;
+				border-bottom-left-radius:10px;
+				border-bottom-right-radius:10px;
+				border: 1px solid gray;
+				margin-top:-2px}
+				
+				
+				/*Styling на LightGray button-а + div.footer е взен на готово от http://www.cssbuttongenerator.com/, с леки промени*/
+		</style>
+	</head>
+	<body>
+		<div class="frame">
+			<div id="header">Drag a column header and drop it here to group by that column</div>
+			<form>
+				<table border="2px" bordercolor="gray" style="border-collapse:collapse" cellpadding="5px">
+					<tbody>
+						<tr>
+							<td id="Small" class="LightGray">ProductID</td>
+							<td id="Long" class="LightGray">Product Name</td>
+							<td id="Average" class="LightGray">Unit price</td>
+							<td id="Average" class="LightGray">Quantity per unit</td>
+							<td id="Average" class="LightGray">Units in Stock</td>
+							<td id="Small" class="LightGray">Discontinued</td>
+						</tr>
+						<tr>
+							<td class="LightBlue">
+								<input type="text" id="smallbox"/>
+							</td>
+							<td class="LightBlue">
+								<input type="text" id="longbox"/>
+							</td>
+							<td class="LightBlue">
+								<input type="text" id="averagebox"/>
+								<input type="button" value="Submit"/>
+							</td>
+							<td class="LightBlue">
+								<input type="text" id="averagebox"/>
+							</td>
+							<td class="LightBlue"> 
+								<input type="text" id="averagebox"/>
+								<input type="button" value="Submit"/>
+							</td>
+							<td class="LightBlue">
+								<input type="checkbox"/>
+								<input type="button" value="Submit"/>
+							</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>Chai</td>
+							<td>$18.00</td>
+							<td>10 boxes x 20 bags</td>
+							<td>39</td>
+							<td><input type="checkbox" disabled="disable"/></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Chang</td>
+							<td>$18.00</td>
+							<td>24 - 12 oz bottles</td>
+							<td>17</td>
+							<td><input type="checkbox" disabled="disable"/></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Aniseed Syrup</td>
+							<td>$10.00</td>
+							<td>12 - 550 ml bottles</td>
+							<td>13</td>
+							<td><input type="checkbox" disabled="disable"/></td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>Chef Anton's Cajun Seasoning</td>
+							<td>$22.00</td>
+							<td>48 -6 oz jars</td>
+							<td>53</td>
+							<td><input type="checkbox" disabled="disable"/></td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>Chef Anton's Gumbo Mix</td>
+							<td>$21.35</td>
+							<td>36 boxes</td>
+							<td>0</td>
+							<td><input type="checkbox" disabled="disable" checked="checked"/></td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>Grandma's Boysenberry Spread</td>
+							<td>$25.00</td>
+							<td>12 - 8 oz jars</td>
+							<td>120</td>
+							<td><input type="checkbox" disabled="disable"/></td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td>Uncle Bob's Organic Dried Pears</td>
+							<td>$30.00</td>
+							<td>12 - 1 lb pkgs</td>
+							<td>15</td>
+							<td><input type="checkbox" disabled="disable"/></td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td>Northwoods Cranberry Sauce</td>
+							<td>$40.00</td>
+							<td>12 - 12 oz jarz</td>
+							<td>6</td>
+							<td><input type="checkbox" disabled="disable"/></td>
+						</tr>
+						<tr>
+							<td>9</td>
+							<td>Mishi Kobe Niku</td>
+							<td>$97.00</td>
+							<td>18 - 500 g pkgs</td>
+							<td>29</td>
+							<td><input type="checkbox" disabled="disable" checked="checked"/></td>
+						</tr>
+						<tr>
+							<td>10</td>
+							<td>Ikura</td>
+							<td>$31.00</td>
+							<td>12 - 200 ml jars</td>
+							<td>31</td>
+							<td><input type="checkbox" disabled="disable"/></td>
+						</tr>
+					<tbody>
+				</table>
+				<div class="footer">
+					<input type="button" value="first"/>
+					<input type="button" value="previous"/>
+					<a href="#" class="Onclick">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#">...</a>
+					<input type="button" value="next"/>
+					<input type="button" value="last"/>
+					<label for="size"><a class="Color">Page Size:</a> </label>
+					<select>
+						<option value="Value 1">1</option>
+						<option value="Value 2">2</option>
+						<option value="Value 3">3</option>
+						<option value="Value 4">4</option>
+						<option value="Value 5">5</option>
+						<option value="Value 6">6</option>
+						<option value="Value 7">7</option>
+						<option value="Value 8">8</option>
+						<option value="Value 9">9</option>
+						<option value="Value 10">10</option>
+					</select>
+					<span>335104 items in 33511 pages</span>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20617.1 PREVIEW
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPNET_HW", "ASPNET_HW\ASPNET_HW.csproj", "{DA55B32A-7763-4174-910B-8679B75273D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicDB.Model", "MusicDB.Model\MusicDB.Model.csproj", "{0289A448-93D9-41AD-A1E5-EDFCD74F3316}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPNET_API.Client", "ASPNET_API.Client\ASPNET_API.Client.csproj", "{309E3448-BD90-41F2-8725-CCF5E50AFCF8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA55B32A-7763-4174-910B-8679B75273D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA55B32A-7763-4174-910B-8679B75273D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA55B32A-7763-4174-910B-8679B75273D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA55B32A-7763-4174-910B-8679B75273D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0289A448-93D9-41AD-A1E5-EDFCD74F3316}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0289A448-93D9-41AD-A1E5-EDFCD74F3316}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0289A448-93D9-41AD-A1E5-EDFCD74F3316}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0289A448-93D9-41AD-A1E5-EDFCD74F3316}.Release|Any CPU.Build.0 = Release|Any CPU
+		{309E3448-BD90-41F2-8725-CCF5E50AFCF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{309E3448-BD90-41F2-8725-CCF5E50AFCF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{309E3448-BD90-41F2-8725-CCF5E50AFCF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{309E3448-BD90-41F2-8725-CCF5E50AFCF8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

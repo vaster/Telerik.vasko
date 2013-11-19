@@ -1,0 +1,26 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        //Write a function that checks if a given object contains a given property
+
+        function hasProperty(obj, string) {
+            if (obj.hasOwnProperty(string)) {
+                return true;
+            }
+            return false;
+        }
+        var obj = new Array(1, 2, 3, 4);
+        var hasProp = hasProperty(obj, "length");
+        jsConsole.writeLine(hasProp);
+       
+    </script>
+</body>
+</html>

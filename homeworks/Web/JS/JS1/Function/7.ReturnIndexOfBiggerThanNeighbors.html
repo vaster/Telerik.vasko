@@ -1,0 +1,38 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        //Write a Function that returns the index of the first element in array that is bigger than its neighbors, or -1, if there’s no such element.
+        //Use the function from the previous exercise.
+
+        function checkNumberValue(sequence) {
+
+            if (1 === sequence.length) {
+                return 0;
+            }
+            for (var i = 1; i < sequence.length - 1; i++) {
+                if (sequence[i] > sequence[i - 1] &&
+                    sequence[i] > sequence[i + 1]) {
+
+                    return i;
+                }
+
+            }
+            return -1;
+
+        }
+
+
+        var sequence = new Array(1, 2, 3, 4, 3, 2, 1);
+        jsConsole.writeLine("First index of number " + " in " + "[" + sequence + "]" +
+            " that is bigger than it's neighbors is at position: " + checkNumberValue(sequence));
+    </script>
+</body>
+</html>

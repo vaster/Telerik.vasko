@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		 <style type="text/css">
+			td.right{font-weight:bold;text-align:right;width:150px}
+			input.name{width:400px}
+			textarea{width:380px}
+			input#City{width:300px}
+			input#State{width:50px}
+			input#Zip{width:100px}
+			select#Country{width:300px}
+			input#PhoneCountryCity{width:90px}
+			input#PhoneNumber{width:150px}
+			input#Email{width:400px}
+			input#Month{width:20px}
+			input#Day{width:20px}
+			input#Year{width:40px}
+			textarea#Comments{height:100px}
+			div{background-color:lightblue;width:580px;border:1px solid;margin-top:-1px;text-align:center}
+			
+		</style>
+	</head>
+	<body>
+		<form>
+			<table border= "1px solid black" cellspacing="0px" cellpadding="5px" style="border-collaplse:collapse">
+				<tr>
+					<td class="right"><label for="LastName">Last Name</label></td>
+					<td><input type="text" id="LastName" class="name"/></td>
+				</tr>
+				<tr>
+					<td class="right"><label for="FirstName">First Name</label></td>
+					<td><input type="text" id="FirstName" class="name"/></td>
+				</tr>
+				<tr>
+					<td class="right"><label  for="Address">Address</label></td>
+					<td><textarea id="Address"></textarea>
+				</tr>
+				<tr>
+					<td class="right"><label for="City">City</label></td>
+					<td>
+						<input type="text" id="City"/>
+						<label for="State">State</label>
+						<input type="text" id="State"/>
+					</td>
+				</tr>
+				<tr>
+					<td class="right"><label for="Zip">Zip/Postal Code</label></td>
+					<td><input type="text" id="Zip"/></td>
+				</tr>
+				<tr>
+					<td class="right"><label for="Country">Country</label></td>
+					<td>
+						<select id="Country">
+							<option value="Value 1">Bulgaria</option>
+							<option value="Value 2">Other</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="right"><label for="Phone">Phone(country code, area code, number)</label></td>
+					<td>
+						(+<input type="tel" id="PhoneCountryCity"/> )
+						<input type="tel"id="PhoneCountryCity"/> -
+						<input type="tel"id="PhoneNumber"/>
+					</td>
+				</tr>
+				<tr>
+					<td class="right"><label for="Email">Email</label></td>
+					<td><input type="email" id="Email"/></td>
+				</tr>
+				<tr>
+					<td class="right"><label for="BirthDate">Birth Date</label></td>
+					<td>
+						<label id="Month">Month</label>
+						<input type="text" id="Month"/>
+						<label id="Day">Day</label>
+						<input type="text" id="Day"/>
+						<label id="Year">Year(4 digit)</label>
+						<input type="text" id="Year"/>
+					</td>
+				</tr>
+				<tr>
+					<td class="right"><label for="Gender">Gender</label></td>
+					<td>
+						<select id="Gender">
+						<option value="Value 1">Female</option>
+						<option value="Value 2">Male</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="right"<label for="StartingDate">StartingDate</label></td>
+					<td>
+						<input type="radio" id="Spring" name="groupe"/>
+						<label id="Spring">Spring 2012</label>
+						<input type="radio" id="Summer" name="groupe"/>
+						<label id="Spring">Summer 2012</label>
+					</td>
+				</tr>
+				<tr>
+					<td class="right"><label for="Comments">Comments/Questions</label></td>
+					<td><textarea id="Comments">Please Send me more information about the logging</textarea></td>
+				</tr>
+			</table>
+				<div>
+					<input type="submit" value="Submit"/>
+					<input type="reset" value="Clear This Form"/>
+				</div>
+		</form>
+	</body>
+</html>

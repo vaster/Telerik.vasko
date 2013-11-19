@@ -1,0 +1,43 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        //Write a program that finds the most frequent number in an array. Example:
+        //{4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3}  4 (5 times)
+
+
+
+
+        var lenght;
+        var count = 0;
+        var maxCount = 0;
+        var maxNumber = 0;
+
+        var array = new Array(1, 2, 2, 2, 3, 4, 2);
+
+
+        for (var i = 0; i < array.length; i++) {
+            for (var j = i; j < array.length; j++) {
+                if (array[i] == array[j]) {
+                    count++;
+                }
+            }
+            if (count > maxCount) {
+                maxCount = count;
+                maxNumber = array[i];
+            }
+            count = 0;
+        }
+
+        jsConsole.writeLine("Most Freq is:" + maxNumber + " counts:" + maxCount);
+
+    </script>
+</body>
+</html>

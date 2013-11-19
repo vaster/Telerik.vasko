@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        //Write a function that counts how many times given number appears in given array. Write a test function to check if the function is working correctly.
+
+        function findYoungestPerson(persons) {
+            var yougestByIndex = 0;
+            var minAge = persons[0].age;
+            for (var i = 0; i < person.length; i++) {
+                if (persons[i].age < minAge)
+                {
+                    minAge = persons[i].age;
+                    yougestByIndex = i;
+                }
+            }
+            return yougestByIndex;
+        }
+
+        function person(fName, lName, age) {
+            this.firstName = fName;
+            this.lastName = lName;
+            this.age = age;
+        }
+
+        var persons = [
+            new person("Ivan", "Ivanov", 7),
+            new person("Gosho", "Goshev", 33),
+            new person("Ceco","Cekov",12),
+        ];
+        jsConsole.writeLine("Name: " +persons[findYoungestPerson(persons)].firstName +" " + persons[findYoungestPerson(persons)].lastName);
+
+    </script>
+</body>
+</html>

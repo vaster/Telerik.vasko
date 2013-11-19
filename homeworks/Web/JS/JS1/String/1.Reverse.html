@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        //Write a JavaScript function reverses string and returns itExample: "sample" -> "elpmas".
+
+
+        function stringReverser(string) {
+            var reversed = null;
+            for (var i = 0; i < string.length; i++) {
+                reversed = reversed + string[string.length - 1 - i];
+            }
+
+            return reversed.replace("null","");
+        }
+
+        var string = "shower";
+        var result = stringReverser(string);
+
+        jsConsole.writeLine(string + " -> " + result);
+
+
+    </script>
+</body>
+</html>

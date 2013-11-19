@@ -1,0 +1,92 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        //You are given a text. Write a function that changes the text in all regions:
+        //<upcase>text</upcase> to uppercase.
+        //<lowcase>text</lowcase> to lowercase
+        //<mixcase>text</mixcase> to mix casing(random)
+
+        function htmlRegionConvertor(sampleText) {
+
+            var openTag = ["<mixcase>", "<upcase>", "<lowcase>"];
+            var closeTag = ["</mixcase>", "</upcase>", "</lowcase>"];
+            var temp = null;
+            var result = null;
+            var indexStart = 0;
+            var indexEnd = 0;
+            var mixCaseCoeff = 0;
+            var reapeter = 0;
+            var z = 0;
+
+            for (var i = 0; i < closeTag.length; i++) {
+              
+                for (; z < sampleText.length; z++) {
+                    do {
+                        indexStart = sampleText.indexOf(openTag[i], indexStart + 1);
+                        indexEnd = sampleText.indexOf(closeTag[i], indexEnd + 1);
+                        break;
+                    } while (indexStart !== -1);
+                    if (z !== indexStart) {
+                        result = result + sampleText[z];
+                    }
+                    temp = sampleText.substring(sampleText.indexOf(openTag[i], indexStart), sampleText.indexOf(closeTag[i], indexEnd));
+                    //jsConsole.writeLine( sampleText[z]+" "+indexStart);
+                    if (z === indexStart) {
+
+                       
+                        switch (openTag[i]) {
+                            case "<upcase>":
+                                {
+                                    result = result + temp.toUpperCase();
+                                    z = z + temp.length - 1;
+                                } break;
+                            case "<lowcase>":
+                                {
+                                    result = result + temp.toLowerCase();
+                                    z = z + temp.length - 1;
+                                } break;
+
+                            case "<mixcase>":
+                                {
+                                   
+                                    var y = 0;
+                                    for (y = indexStart + openTag[i].length; y <= indexEnd; y++) {
+                                        mixCaseCoeff++;
+                                        if (mixCaseCoeff % 2 === 0) {
+                                            result = result + sampleText[y].toUpperCase();
+                                        }
+                                        if(mixCaseCoeff%2!==0) {
+                                            result = result + sampleText[y].toLowerCase();
+                                        }
+                                    }
+                                    z = z + y;
+                                }break;
+                        }
+
+                    }
+                }
+
+            }
+            return result;
+        }
+
+
+
+        var sampleText = "We are <mixcase>living</mixcase> in a <upcase>yellow submarine</upcase>." +
+                              "We <mixcase>don't</mixcase> have <lowcase>anything</lowcase> else. ";
+
+        var convertedText = htmlRegionConvertor(sampleText);
+        jsConsole.writeLine(convertedText);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        //Write a function that removes all elements with a given value
+        //Attach it to the array class
+        //Read about prototype and how to attach methods
+
+
+        //sample remove func
+        Array.prototype.remove = function (value) {
+            var length = 1;
+            for (var i = 0; i < this.length; i++) {
+                if (this[i] === value) {
+                    for (var y = i + 1; y < this.length; y++) {//secondary check if there are many elements in a row of the searched value
+                        if (this[y] === value) {
+                            length++;
+                        }
+                        else {
+                            break;
+                        }
+                    }
+                    this.splice(i, length);
+                    length = 1;
+                }
+            }
+        };
+
+
+        var sampleArray = new Array(1, 2, 3, 4, 5, 5, 5, 4, 5);
+        sampleArray.remove(5);
+        jsConsole.writeLine(sampleArray);
+    </script>
+</body>
+</html>

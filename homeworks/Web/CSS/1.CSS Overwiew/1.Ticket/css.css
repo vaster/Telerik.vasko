@@ -1,0 +1,9 @@
+td#white{color:white}
+table{background-color:#424646;font-size:20px;border-spacing:15px}
+td#yellow{color:#F1E75C}
+td#orangeBold{font-weight:bold;color:orange}
+td#red{color:red;font-weight:bold}
+h1,td#gray{font-weight:normal;color:darkgray}
+img{background-color:transperent}
+
+

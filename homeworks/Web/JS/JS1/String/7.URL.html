@@ -1,0 +1,53 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        //Write a script that parses an URL address given in the format:
+        //and extracts from it the [protocol], [server] and [resource] elements.
+        //Return the elements in a JSON object.
+        function urlExtractor(url) {
+            var protocolIndex = 0;
+            var serverIndex = 0;
+            var resourceIndex = 0;
+
+            var protocol = "";
+            var server = "";
+            var resource = "";
+
+            protocolIndex = url.indexOf('/', 0);
+            serverIndex = url.indexOf('/',protocolIndex+2);
+            for (var i = 0; i < protocolIndex-1; i++) {
+                protocol = protocol + url[i];
+            }
+            for (var i = protocolIndex+2; i < serverIndex; i++) {
+                server = server + url[i];
+            }
+            for (var i = serverIndex; i < url.length; i++) {
+                resource = resource + url[i];
+            }
+
+            return {
+                protocol: protocol,
+                server: server,
+                resource:resource,
+            };
+
+        }
+
+
+        var sampleURL = "http://www.devbg.org/forum/index.php";
+        var result = urlExtractor(sampleURL);
+        jsConsole.writeLine("Protocol: " + result.protocol);
+        jsConsole.writeLine("Server: "+result.server);
+        jsConsole.writeLine("Resource: "+result.resource);
+
+    </script>
+</body>
+</html>

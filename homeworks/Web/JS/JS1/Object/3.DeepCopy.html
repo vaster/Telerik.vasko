@@ -1,0 +1,49 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        //Write a function that makes a deep copy of an object
+        //The function should work for both primitive and reference types
+
+        //sample implement of deep Copy
+        Object.prototype.deepCopy = function () {
+            var type = typeof this;
+            switch (type) {
+                case "object":
+                    {
+                        return new Object(this);
+                    } break;
+                default:
+                    {
+                        var copy = this;
+                        return copy;
+                    } break;
+            }
+        };
+
+        //testing
+        var number = 10;
+        var obj = new Number(15);
+        var testPrimitive = number.deepCopy();
+        var testObject = obj.deepCopy();
+        testPrimitive = testPrimitive + 1;
+        obj = obj + 1;
+
+        jsConsole.writeLine("Primitive types ->");
+        jsConsole.writeLine("Original value: " + number);
+        jsConsole.writeLine("Copy of original value incemented by 1: " + testPrimitive);
+        jsConsole.writeLine("Reference type ->");
+        jsConsole.writeLine("Origininal value incremented by 1: " + obj);
+        jsConsole.writeLine("Copy of original value befour increment: " + testObject);
+
+
+    </script>
+</body>
+</html>

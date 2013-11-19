@@ -1,0 +1,47 @@
+
+
+
+
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        //Write an expression that checks for given integer if its third digit (right-to-left) is 7. E. g. 1732 => true.
+
+        var number = 731;
+        var array = new Array();
+        var rest;
+        var counter=0;
+        var flag = 0;
+        do
+        {
+            if(flag>0)
+                number = number / 10;
+            rest = parseInt(number % 10);
+            flag++;
+            array[counter] = rest;
+            counter++; 
+        }while(number !=0);
+
+        if (array[2] == 7 || array[2] == -7)
+        {
+            jsConsole.writeLine("True");
+        }
+        else
+        {
+            jsConsole.writeLine("Flase");
+        }
+            
+        
+
+    </script>
+</body>
+</html>

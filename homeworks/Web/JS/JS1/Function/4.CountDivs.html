@@ -1,0 +1,59 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        //Write a function to count the number of divs on the web page
+        function countDivs(webPageSourceCoude) {
+            var count = 0;
+            for (var i = 0; i < webPageSourceCoude.length - 3; i++) {
+                if(webPageSourceCoude[i] === '<')
+                {
+                  
+                    if(webPageSourceCoude[i+1] === 'd')
+                    {
+                       
+                        if(webPageSourceCoude[i+2] === 'i')
+                        {
+                           
+                            if(webPageSourceCoude[i+3] === 'v')
+                            {
+                               
+                                count++;
+                            }
+                        }
+                    }
+                }
+    
+            }
+            return count;
+        }
+
+
+        var sampleWeb =
+                        
+                        	"<head>"+
+                        	"</head>"+
+                        	"<body>"+
+                        		"<div>Hello, Stranger!</div>"+
+                        		"<h1>Welcome to Runners Home™</h1>"+
+                        		"<div>Runners Home™ is dedicated to providing you with:</div>"+
+                        		"<div>-the best up-to-date information on running races</div>"+
+                        		"<div>-the best resources for runners</div>"+
+                        		"<hr></hr>"+
+                        		"<div>© 2007 Runners Home. All rights reserved.</div>"+
+                        	"</body>"+
+                        "</html>";
+
+        jsConsole.writeLine(sampleWeb);
+        jsConsole.writeLine("Divs are: " + countDivs(sampleWeb));
+                        		
+    </script>
+</body>
+</html>

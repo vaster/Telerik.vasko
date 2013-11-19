@@ -1,0 +1,51 @@
+﻿
+
+
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        //Write a script that finds the maximal sequence of equal elements in an array.
+        //Example: {2, 1, 1, 2, 3, 3, 2, 2, 2, 1}  {2, 2, 2}.
+
+
+
+        var sampleArray = new Array(1, 2, 3,3, 3, 3, 4, 2, 2);
+        var maxSequenceLenght = 0;
+        var sequenceLenght = 0;
+        var symbolOfSequence;
+        for (var i = 0; i < sampleArray.length-1; i++) {
+            if (sampleArray[i] === sampleArray[i + 1]) {
+                sequenceLenght++;
+                
+                if (sequenceLenght > maxSequenceLenght) {
+                    maxSequenceLenght = sequenceLenght;
+                    symbolOfSequence = sampleArray[i];
+                }
+            }
+            else {
+                sequenceLenght = 0;
+               
+            }
+           
+        }
+        jsConsole.write("[");
+        for (var i = 0; i <=maxSequenceLenght; i++) {
+            jsConsole.write(symbolOfSequence);
+            if (i >= 0 && i < maxSequenceLenght) {
+                jsConsole.write(",");
+            }
+
+        }
+        jsConsole.write("]");
+
+    </script>
+</body>
+</html>
