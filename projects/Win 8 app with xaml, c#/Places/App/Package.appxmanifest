@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="29804vasil.oreshenski.43PlacesToVisit" Publisher="CN=F14DCEE7-0708-44AE-B2AB-B1F976515D94" Version="1.0.0.1" />
+  <Properties>
+    <DisplayName>43 Places To Visit</DisplayName>
+    <PublisherDisplayName>vasil.oreshenski</PublisherDisplayName>
+    <Logo>Assets\storeLogo50x50.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="App.App">
+      <VisualElements DisplayName="43 Places To Visit" Logo="Assets\logo150x150.png" SmallLogo="Assets\smallLogo30x30.png" Description="App" ForegroundText="light" BackgroundColor="purple" ToastCapable="false">
+        <DefaultTile ShowName="allLogos" />
+        <SplashScreen Image="Assets\testSplash.png" BackgroundColor="white" />
+      </VisualElements>
+      <Extensions>
+        <Extension Category="windows.search" />
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

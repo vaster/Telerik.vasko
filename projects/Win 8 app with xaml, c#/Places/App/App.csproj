@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{63908605-9365-4802-A053-4DBE18D60ADC}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>App</RootNamespace>
+    <AssemblyName>App</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>App_StoreKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <PackageCertificateThumbprint>329D30ACAC533D1F80E2677ADAFE16858C93B5BD</PackageCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\BindableBase.cs" />
+    <Compile Include="Common\BooleanNegationConverter.cs" />
+    <Compile Include="Common\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Common\LayoutAwarePage.cs" />
+    <Compile Include="Common\RichTextColumns.cs" />
+    <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="HttpClient-ViewModel-Bridge\DataPersister.cs" />
+    <Compile Include="ViewModel\AssociatesByCategoryViewModel.cs" />
+    <Compile Include="ViewModel\AssociatesByContinentViewModel.cs" />
+    <Compile Include="ViewModel\OnlyTextDescriptionViewModel.cs" />
+    <Compile Include="ViewModel\SearchViewModel.cs" />
+    <Compile Include="ViewModel\ShortDescriptionViewModel.cs" />
+    <Compile Include="View\AssociatesByCategory.xaml.cs">
+      <DependentUpon>AssociatesByCategory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AssociatesByContinent.xaml.cs">
+      <DependentUpon>AssociatesByContinent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Navigation\Navigator.cs" />
+    <Compile Include="Navigation\Views.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="View\MainPageSearch.xaml.cs">
+      <DependentUpon>MainPageSearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NoInternetPage.xaml.cs">
+      <DependentUpon>NoInternetPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\OnlyTextDescriptionPage.xaml.cs">
+      <DependentUpon>OnlyTextDescriptionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ShortDescriptionPage.xaml.cs">
+      <DependentUpon>ShortDescriptionPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="App_StoreKey.pfx" />
+    <None Include="Package.StoreAssociation.xml" />
+    <None Include="App_TemporaryKey.pfx" />
+    <Content Include="Assets\Base\AmazonRainForest\2.jpg" />
+    <Content Include="Assets\Base\AmazonRainForest\3.jpg" />
+    <Content Include="Assets\Base\AmazonRainForest\4.jpg" />
+    <Content Include="Assets\Base\AmazonRainForest\5.jpg" />
+    <Content Include="Assets\Base\FallingWater\3.jpg" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Base\AngkorWat\2.jpg" />
+    <Content Include="Assets\Base\AngkorWat\3.jpg" />
+    <Content Include="Assets\Base\AngkorWat\4.jpg" />
+    <Content Include="Assets\Base\AngkorWat\5.jpg" />
+    <Content Include="Assets\Base\Antarctica\2.JPG" />
+    <Content Include="Assets\Base\Antarctica\3.jpg" />
+    <Content Include="Assets\Base\Antarctica\4.jpg" />
+    <Content Include="Assets\Base\Antarctica\5.jpg" />
+    <Content Include="Assets\Base\AppalachianMaountains\1.jpg" />
+    <Content Include="Assets\Base\AppalachianMaountains\2.jpg" />
+    <Content Include="Assets\Base\AppalachianMaountains\3.jpg" />
+    <Content Include="Assets\Base\AppalachianMaountains\4.jpg" />
+    <Content Include="Assets\Base\AppalachianMaountains\5.jpg" />
+    <Content Include="Assets\Base\Aurora\2.jpg" />
+    <Content Include="Assets\Base\Aurora\3.jpg" />
+    <Content Include="Assets\Base\Aurora\4.jpg" />
+    <Content Include="Assets\Base\Aurora\5.jpg" />
+    <Content Include="Assets\Base\Barcelona\2.jpg" />
+    <Content Include="Assets\Base\Barcelona\3.jpg" />
+    <Content Include="Assets\Base\Barcelona\4.jpg" />
+    <Content Include="Assets\Base\Barcelona\5.jpg" />
+    <Content Include="Assets\Base\Began\2.jpg" />
+    <Content Include="Assets\Base\Began\3.jpg" />
+    <Content Include="Assets\Base\Began\4.jpg" />
+    <Content Include="Assets\Base\Began\5.jpg" />
+    <Content Include="Assets\Base\Berlin\2.jpg" />
+    <Content Include="Assets\Base\Berlin\3.jpg" />
+    <Content Include="Assets\Base\Berlin\4.jpg" />
+    <Content Include="Assets\Base\Berlin\5.jpg" />
+    <Content Include="Assets\Base\CostaRica\2.jpg" />
+    <Content Include="Assets\Base\CostaRica\3.jpg" />
+    <Content Include="Assets\Base\CostaRica\4.jpg" />
+    <Content Include="Assets\Base\CostaRica\5.jpg" />
+    <Content Include="Assets\Base\Dalarna\2.jpg" />
+    <Content Include="Assets\Base\Dalarna\3.jpg" />
+    <Content Include="Assets\Base\Dalarna\4.jpg" />
+    <Content Include="Assets\Base\Dalarna\5.jpg" />
+    <Content Include="Assets\Base\EasterIsland\2.jpg" />
+    <Content Include="Assets\Base\EasterIsland\3.jpg" />
+    <Content Include="Assets\Base\EasterIsland\4.jpg" />
+    <Content Include="Assets\Base\EasterIsland\5.jpg" />
+    <Content Include="Assets\Base\Ephesus\2.JPG" />
+    <Content Include="Assets\Base\Ephesus\3.jpg" />
+    <Content Include="Assets\Base\Ephesus\4.jpg" />
+    <Content Include="Assets\Base\Ephesus\5.jpg" />
+    <Content Include="Assets\Base\Everglades\2.jpg" />
+    <Content Include="Assets\Base\Everglades\3.jpg" />
+    <Content Include="Assets\Base\Everglades\4.jpg" />
+    <Content Include="Assets\Base\Everglades\5.jpg" />
+    <Content Include="Assets\Base\FallingWater\2.jpg" />
+    <Content Include="Assets\Base\FallingWater\4.jpg" />
+    <Content Include="Assets\Base\FallingWater\5.jpg" />
+    <Content Include="Assets\Base\FatehpurSikri\2.jpg" />
+    <Content Include="Assets\Base\FatehpurSikri\3.jpg" />
+    <Content Include="Assets\Base\FatehpurSikri\4.jpg" />
+    <Content Include="Assets\Base\FatehpurSikri\5.jpg" />
+    <Content Include="Assets\Base\GalapagosIslands\2.jpg" />
+    <Content Include="Assets\Base\GalapagosIslands\3.jpg" />
+    <Content Include="Assets\Base\GalapagosIslands\4.jpg" />
+    <Content Include="Assets\Base\GalapagosIslands\5.jpg" />
+    <Content Include="Assets\Base\GrandCanyon\2.jpg" />
+    <Content Include="Assets\Base\GrandCanyon\3.jpg" />
+    <Content Include="Assets\Base\GrandCanyon\4.jpg" />
+    <Content Include="Assets\Base\GrandCanyon\5.jpg" />
+    <Content Include="Assets\Base\Hawaii\2.jpg" />
+    <Content Include="Assets\Base\Hawaii\3.JPG" />
+    <Content Include="Assets\Base\Hawaii\4.jpg" />
+    <Content Include="Assets\Base\Hawaii\5.jpg" />
+    <Content Include="Assets\Base\Hebrides\2.jpg" />
+    <Content Include="Assets\Base\Hebrides\3.jpg" />
+    <Content Include="Assets\Base\Hebrides\4.jpg" />
+    <Content Include="Assets\Base\Hebrides\5.jpg" />
+    <Content Include="Assets\Base\Iceland\2.jpg" />
+    <Content Include="Assets\Base\Iceland\3.jpg" />
+    <Content Include="Assets\Base\Iceland\4.jpg" />
+    <Content Include="Assets\Base\Iceland\5.jpg" />
+    <Content Include="Assets\Base\IguazuFalls\2.jpg" />
+    <Content Include="Assets\Base\IguazuFalls\3.jpg" />
+    <Content Include="Assets\Base\IguazuFalls\4.jpg" />
+    <Content Include="Assets\Base\IguazuFalls\5.JPG" />
+    <Content Include="Assets\Base\Kilimanjaro\2.jpg" />
+    <Content Include="Assets\Base\Kilimanjaro\3.jpg" />
+    <Content Include="Assets\Base\Kilimanjaro\4.jpg" />
+    <Content Include="Assets\Base\Kilimanjaro\5.jpg" />
+    <Content Include="Assets\Base\MachuPicchu\2.jpg" />
+    <Content Include="Assets\Base\MachuPicchu\3.jpg" />
+    <Content Include="Assets\Base\MachuPicchu\4.jpg" />
+    <Content Include="Assets\Base\MachuPicchu\5.jpg" />
+    <Content Include="Assets\Base\MesaVerde\2.jpg" />
+    <Content Include="Assets\Base\MesaVerde\3.JPG" />
+    <Content Include="Assets\Base\MesaVerde\4.jpg" />
+    <Content Include="Assets\Base\MesaVerde\5.jpg" />
+    <Content Include="Assets\Base\Newfoundland\2.jpg" />
+    <Content Include="Assets\Base\Newfoundland\3.jpg" />
+    <Content Include="Assets\Base\Newfoundland\4.jpg" />
+    <Content Include="Assets\Base\Newfoundland\5.jpg" />
+    <Content Include="Assets\Base\Parthenon\2.jpg" />
+    <Content Include="Assets\Base\Parthenon\3.jpg" />
+    <Content Include="Assets\Base\Parthenon\4.jpg" />
+    <Content Include="Assets\Base\Parthenon\5.jpg" />
+    <Content Include="Assets\Base\Petra\2.jpg" />
+    <Content Include="Assets\Base\Petra\3.jpg" />
+    <Content Include="Assets\Base\Petra\4.jpg" />
+    <Content Include="Assets\Base\Petra\5.jpg" />
+    <Content Include="Assets\Base\Pompei\2.jpg" />
+    <Content Include="Assets\Base\Pompei\3.jpg" />
+    <Content Include="Assets\Base\Pompei\4.jpg" />
+    <Content Include="Assets\Base\Pompei\5.jpg" />
+    <Content Include="Assets\Base\PyramidsOfGiza\2.jpg" />
+    <Content Include="Assets\Base\PyramidsOfGiza\3.jpg" />
+    <Content Include="Assets\Base\PyramidsOfGiza\4.jpg" />
+    <Content Include="Assets\Base\PyramidsOfGiza\5.jpg" />
+    <Content Include="Assets\Base\Santorini\2.jpg" />
+    <Content Include="Assets\Base\Santorini\3.jpg" />
+    <Content Include="Assets\Base\Santorini\4.jpg" />
+    <Content Include="Assets\Base\Santorini\5.jpg" />
+    <Content Include="Assets\Base\Serengeti\2.jpg" />
+    <Content Include="Assets\Base\Serengeti\3.jpg" />
+    <Content Include="Assets\Base\Serengeti\4.jpg" />
+    <Content Include="Assets\Base\Serengeti\5.JPG" />
+    <Content Include="Assets\Base\TableMountainNP\2.jpg" />
+    <Content Include="Assets\Base\TableMountainNP\3.jpg" />
+    <Content Include="Assets\Base\TableMountainNP\4.jpg" />
+    <Content Include="Assets\Base\TableMountainNP\5.jpg" />
+    <Content Include="Assets\Base\TajMahal\2.jpg" />
+    <Content Include="Assets\Base\TajMahal\3.jpg" />
+    <Content Include="Assets\Base\TajMahal\4.jpg" />
+    <Content Include="Assets\Base\TajMahal\5.jpg" />
+    <Content Include="Assets\Base\TheGreatWall\2.JPG" />
+    <Content Include="Assets\Base\TheGreatWall\3.jpg" />
+    <Content Include="Assets\Base\TheGreatWall\4.jpg" />
+    <Content Include="Assets\Base\TheGreatWall\5.jpg" />
+    <Content Include="Assets\Base\TheLouver\2.jpg" />
+    <Content Include="Assets\Base\TheLouver\3.jpg" />
+    <Content Include="Assets\Base\TheLouver\4.jpg" />
+    <Content Include="Assets\Base\TheLouver\5.jpg" />
+    <Content Include="Assets\Base\Tikal\2.jpg" />
+    <Content Include="Assets\Base\Tikal\3.jpg" />
+    <Content Include="Assets\Base\Tikal\4.jpg" />
+    <Content Include="Assets\Base\Tikal\5.jpg" />
+    <Content Include="Assets\Base\UffiziGallery\2.jpg" />
+    <Content Include="Assets\Base\UffiziGallery\3.jpg" />
+    <Content Include="Assets\Base\UffiziGallery\4.jpg" />
+    <Content Include="Assets\Base\UffiziGallery\5.jpg" />
+    <Content Include="Assets\Base\Venice\2.jpg" />
+    <Content Include="Assets\Base\Venice\3.jpg" />
+    <Content Include="Assets\Base\Venice\4.jpg" />
+    <Content Include="Assets\Base\Venice\5.jpg" />
+    <Content Include="Assets\Base\WhiteSands\2.jpg" />
+    <Content Include="Assets\Base\WhiteSands\3.jpg" />
+    <Content Include="Assets\Base\WhiteSands\4.jpg" />
+    <Content Include="Assets\Base\WhiteSands\5.jpg" />
+    <Content Include="Assets\Base\YangtzeRiver\2.jpg" />
+    <Content Include="Assets\Base\YangtzeRiver\3.jpg" />
+    <Content Include="Assets\Base\YangtzeRiver\4.JPG" />
+    <Content Include="Assets\Base\YangtzeRiver\5.jpg" />
+    <Content Include="Assets\Base\ZenGardenOfKyoto\2.jpg" />
+    <Content Include="Assets\Base\ZenGardenOfKyoto\3.jpg" />
+    <Content Include="Assets\Base\ZenGardenOfKyoto\4.jpg" />
+    <Content Include="Assets\Base\ZenGardenOfKyoto\5.jpg" />
+    <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\logo150x150.png" />
+    <Content Include="Assets\SmallLogo.png" />
+    <Content Include="Assets\smallLogo30x30.png" />
+    <Content Include="Assets\SplashScreen.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\storeLogo50x50.png" />
+    <Content Include="Assets\testSplash.png" />
+    <Content Include="Common\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Common\StandardStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\AssociatesByCategory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AssociatesByContinent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MainPageSearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NoInternetPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\OnlyTextDescriptionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ShortDescriptionPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PlacesToVisit.Models\PlacesToVisit.Models.csproj">
+      <Project>{5bbb00d0-e25b-4b26-8425-9e3d00ee45ec}</Project>
+      <Name>PlacesToVisit.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PlacesToVisit.WikiClient\PlacesToVisit.WikiClient.csproj">
+      <Project>{c1c780f6-20aa-4966-98c0-b61b8310325b}</Project>
+      <Name>PlacesToVisit.WikiClient</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight.Extras.Win8">
+      <HintPath>..\packages\MvvmLightLibs.4.1.27.1\lib\netcore45\GalaSoft.MvvmLight.Extras.Win8.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Win8">
+      <HintPath>..\packages\MvvmLightLibs.4.1.27.1\lib\netcore45\GalaSoft.MvvmLight.Win8.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\MvvmLightLibs.4.1.27.1\lib\netcore45\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\netcore45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
