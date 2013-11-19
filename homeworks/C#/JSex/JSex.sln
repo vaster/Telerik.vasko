@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1F69FE66-9280-4099-BAC9-483B9B1FE051}"
+	ProjectSection(SolutionItems) = preProject
+		DomJS.js = DomJS.js
+		funcOOP.html = funcOOP.html
+		funcOOP.js = funcOOP.js
+		ModuleForDOM.html = ModuleForDOM.html
+		moving-div.js = moving-div.js
+		movingDiv.html = movingDiv.html
+		OOP.html = OOP.html
+		OPP-js.js = OPP-js.js
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

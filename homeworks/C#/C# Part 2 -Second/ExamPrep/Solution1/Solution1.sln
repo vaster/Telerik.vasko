@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sudoko", "Sudoko\Sudoko.csproj", "{A5956630-338F-44C4-980C-1B47BA1344E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employees", "Employees\Employees.csproj", "{920F889A-3046-4DA6-9FCC-1FEE7E879E59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3D-Walk", "3D-Walk\3D-Walk.csproj", "{8DA441BB-12F0-4C7D-8CE9-7FCC8882B4BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Liquid", "Liquid\Liquid.csproj", "{67291794-3014-40BD-B006-40A569428E57}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5956630-338F-44C4-980C-1B47BA1344E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5956630-338F-44C4-980C-1B47BA1344E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5956630-338F-44C4-980C-1B47BA1344E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5956630-338F-44C4-980C-1B47BA1344E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{920F889A-3046-4DA6-9FCC-1FEE7E879E59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{920F889A-3046-4DA6-9FCC-1FEE7E879E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{920F889A-3046-4DA6-9FCC-1FEE7E879E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{920F889A-3046-4DA6-9FCC-1FEE7E879E59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DA441BB-12F0-4C7D-8CE9-7FCC8882B4BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DA441BB-12F0-4C7D-8CE9-7FCC8882B4BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DA441BB-12F0-4C7D-8CE9-7FCC8882B4BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DA441BB-12F0-4C7D-8CE9-7FCC8882B4BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67291794-3014-40BD-B006-40A569428E57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67291794-3014-40BD-B006-40A569428E57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67291794-3014-40BD-B006-40A569428E57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67291794-3014-40BD-B006-40A569428E57}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

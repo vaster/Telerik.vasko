@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        function onButtonClick(THE_event, argumenti) {
+            var applicationWindow = window;
+            var applicationBrowser = applicationWindow.navigator.appCodeName;
+            var isMozilla = applicationBrowser == "Mozilla";
+
+            if (isMozilla) {
+                alert("Yes");
+            }
+            else {
+                alert("No");
+            }
+        }
+    </script>
+
+</body>
+</html>

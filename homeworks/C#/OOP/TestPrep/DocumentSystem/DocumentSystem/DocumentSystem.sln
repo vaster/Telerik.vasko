@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocSystem", "DocSystem\DocSystem.csproj", "{8ACFC25E-FCC5-4156-BB42-1591DFA89844}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentSystem", "..\..\..\..\..\..\..\Desktop\DocumentSystem.csproj", "{D38D946D-40C1-4B14-9C25-F073CBE04007}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8ACFC25E-FCC5-4156-BB42-1591DFA89844}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ACFC25E-FCC5-4156-BB42-1591DFA89844}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ACFC25E-FCC5-4156-BB42-1591DFA89844}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ACFC25E-FCC5-4156-BB42-1591DFA89844}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D38D946D-40C1-4B14-9C25-F073CBE04007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D38D946D-40C1-4B14-9C25-F073CBE04007}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D38D946D-40C1-4B14-9C25-F073CBE04007}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D38D946D-40C1-4B14-9C25-F073CBE04007}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

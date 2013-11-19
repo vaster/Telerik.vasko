@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.TreeUnderstanding", "TreeUnderstanding\1.TreeUnderstanding.csproj", "{E0955ECE-5005-4042-A7B8-B2E156A7120D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.DirectoryIteretion", "DirectoryIteretion\2.DirectoryIteretion.csproj", "{19212500-D85A-4AA2-BC49-062A8E73C4D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.DirTree", "DirTree\3.DirTree.csproj", "{2C05F02D-32A3-47BA-9754-898DA02DE772}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0955ECE-5005-4042-A7B8-B2E156A7120D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0955ECE-5005-4042-A7B8-B2E156A7120D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0955ECE-5005-4042-A7B8-B2E156A7120D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0955ECE-5005-4042-A7B8-B2E156A7120D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19212500-D85A-4AA2-BC49-062A8E73C4D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19212500-D85A-4AA2-BC49-062A8E73C4D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19212500-D85A-4AA2-BC49-062A8E73C4D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19212500-D85A-4AA2-BC49-062A8E73C4D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C05F02D-32A3-47BA-9754-898DA02DE772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C05F02D-32A3-47BA-9754-898DA02DE772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C05F02D-32A3-47BA-9754-898DA02DE772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C05F02D-32A3-47BA-9754-898DA02DE772}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _7.Timer
+{
+    class Core
+    {
+        static void Main(string[] args)
+        {
+            TimeDeley delayExecution;
+            delayExecution = Timer.Msg;
+            while (true)
+            {
+                delayExecution("Hello", 5);
+            }
+        }
+    }
+}

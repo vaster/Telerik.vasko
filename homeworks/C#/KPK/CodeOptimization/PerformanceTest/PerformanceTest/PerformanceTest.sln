@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.SampleOperations", "1.SampleOperations\1.SampleOperations.csproj", "{3619BF7A-0F39-4351-9CC6-3D07AD3C9D4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.AdvenceOperations", "2.AdvenceOperations\2.AdvenceOperations.csproj", "{7EF755F5-AA37-4A6C-A487-32B2BF0991DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3619BF7A-0F39-4351-9CC6-3D07AD3C9D4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3619BF7A-0F39-4351-9CC6-3D07AD3C9D4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3619BF7A-0F39-4351-9CC6-3D07AD3C9D4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3619BF7A-0F39-4351-9CC6-3D07AD3C9D4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EF755F5-AA37-4A6C-A487-32B2BF0991DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EF755F5-AA37-4A6C-A487-32B2BF0991DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EF755F5-AA37-4A6C-A487-32B2BF0991DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EF755F5-AA37-4A6C-A487-32B2BF0991DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
