@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Sample</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+
+    <!--libs references-->
+    <script src="js/libs/jspdf.min.js"></script>
+
+    <!--connections checking references-->
+    <script src="js/client/connections/internetAccessManager.js"></script>
+
+    <!--service references -->
+    <script src="js/api/ocrService.js"></script>
+
+    <!--events references -->
+    <script src="js/client/commands/filePickerWizard.js"></script>
+    <script src="js/client/commands/eventWizard.js"></script>
+    <script src="js/client/commands/initUIElements.js"></script>
+
+    <!--mvvm references-->
+    <!--models-->
+    <script src="js/client/MVVM/models/outputText.js"></script>
+    <script src="js/client/MVVM/models/picture.js"></script>
+    <!--view models-->
+    <script src="js/client/MVVM/viewModels/default.js"></script>
+
+    <!--bridges references-->
+    <script src="js/client/ui-vm-bridge/ui-vm-bridge.js"></script>
+
+
+    <!--error references-->
+    <script src="js/client/globalErrorHanlding/errorHandler.js"></script>
+
+    <!--notifications references-->
+    <script src="js/client/notifications/notification.js"></script>
+
+    <!--session references-->
+    <script src="js/client/sessionStorage/sessionHanlderWizard.js"></script>
+
+    <!--contracts references-->
+    <script src="js/client/contrancts/initShareContract.js"></script>
+
+    <script src="/js/default.js"></script>
+
+    <link href="/css/default.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div data-win-control="WinJS.UI.AppBar" data-win-options="{sticky:'true'}">
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'add-local-file',label:'Add File',icon:'add',section:'selection',tooltip:'Add Picture from Local Drive'}"></button>
+        <!--<button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'take-picture-from-camera',label:'Take Photo',icon:'camera', section:'selection',tooltip:'Add Picture from Camera'}"></button>-->
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'proccess',label:'Process',icon:'emoji',section:'selection',tooltip:'Process '}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'settings',label:'Settings',icon:'settings',tooltip:'Settings '}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'save-output',label:'Save File',icon:'save',tooltip:'Save result'}"></button>
+    </div>
+
+    <div id="error-flyout" data-win-control="WinJS.UI.Flyout">
+        <p id="error-holder">
+        </p>
+    </div>
+
+    <div id="instructions-flyout" data-win-control="WinJS.UI.Flyout">
+        <h2>Instructions</h2>
+        <hr />
+        <p>
+            1. Add picture from the appbar -> .
+        </p>
+        <p>
+            <i>Supported file formats: <strong>.jpg</strong>, <strong>.bmp</strong>,<strong>.gif</strong> ,<strong>.png</strong> .</i>
+        </p>
+        <p>
+            2. Press the <i>proccess button</i> from the appbar - > .
+        </p>
+        <p>
+            Depending on the image quality and number of charachters, the time you're going to wait my escalate.
+        </p>
+        <p>
+            3. When the proccess finish, you can save your result from the <i>save button</i> from the appbar -> .
+        </p>
+        <p>
+            <i>Supported file formats: <strong>.txt</strong>, <strong>.pdf</strong>.</i>
+        </p>
+         <p>
+            <i><strong>(See the settings button in the appbar for more information about Auto Save Mode.)</strong></i>
+        </p>
+    </div>
+
+    <div id="settings-flyout" data-win-control="WinJS.UI.Flyout">
+        <h2>Auto saving mode</h2>
+        <hr />
+        <div id="auto-save-mode-switch" data-win-control="WinJS.UI.ToggleSwitch">
+        </div>
+        <p>Destination Folder: <strong>\Pictures\SimpleOCR</strong></p>
+        <p>File type extension</p>
+        <input type="radio" name="extensionType" value=".txt" /><strong>.txt</strong>
+        <input type="radio" name="extensionType" value=".pdf" /><strong>.pdf</strong>
+        <p>
+            (<i><strong>Imortant:</strong></i> Auto saving mode allows automatic save of the result file when the process is complete in you Pictures Library with the file type you define. 
+           <strong><i>Name of the saved files will look like follows: Sample0, Sample1, Sampl2 ...</i></strong>)
+        </p>
+        <p>Once the saving mode is <strong>On</strong> it will apply its funcionality whenever the program is started, until the mode is turned <strong>Off</strong>. </p>
+    </div>
+
+    <div class="appGrid">
+        <header id="header-holder" class="header">
+            <div id="headerLogoHolder">
+                <h1 class="headerItem">Simple OCR | </h1>
+                <a id="instructions-btn" >
+                    <h1>Instructions</h1>
+                </a>
+            </div>
+        </header>
+        <div class="appViewMask">
+            <div class="appCurrentView">
+                <progress id="progress-ring-holder" class="win-ring withText"></progress>
+
+                <div id="image-to-proccess-holder">
+                    <div id="view-pic-frame">
+                        <img class="maglarge" id="picked-picture" src="#" data-win-bind="src:imageUrl" />
+
+                    </div>
+                    <div id="picture-info-holder">
+                        <span class="picture-info-item" data-win-bind="textContent:name"></span>
+                        <span class="picture-info-item" data-win-bind="textContent:fileExtension"></span>
+                    </div>
+                </div>
+
+                <div id="proccess-output-holder">
+                    <div id="view-output-frame">
+                        <textarea spellcheck="true" id="proccess-output" data-win-bind="value:content"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

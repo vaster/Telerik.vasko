@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="29804vasil.oreshenski.SimpleOCR" Version="1.0.0.5" Publisher="CN=F14DCEE7-0708-44AE-B2AB-B1F976515D94" />
+  <Properties>
+    <DisplayName>Simple OCR</DisplayName>
+    <PublisherDisplayName>vasil.oreshenski</PublisherDisplayName>
+    <Logo>images\simpleOCRStoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="default.html">
+      <VisualElements DisplayName="Simple OCR" Logo="images\smallLogo.png" SmallLogo="images\smalllogo2.png" Description="Simple OCR" ForegroundText="dark" BackgroundColor="#F2DC83" ToastCapable="true">
+        <DefaultTile ShowName="allLogos" />
+        <SplashScreen Image="images\spashScreen.png" BackgroundColor="#99D9EA" />
+      </VisualElements>
+      <Extensions>
+        <Extension Category="windows.fileTypeAssociation">
+          <FileTypeAssociation Name="output_file_types">
+            <SupportedFileTypes>
+              <FileType>.pdf</FileType>
+              <FileType>.txt</FileType>
+            </SupportedFileTypes>
+          </FileTypeAssociation>
+        </Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="picturesLibrary" />
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

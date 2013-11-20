@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>bceb762e-ac0d-4460-8779-82c21e91e629</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).Default.props" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).props" />
+  <PropertyGroup>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetPlatformVersion>8.0</TargetPlatformVersion>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <PackageCertificateKeyFile>Sample_StoreKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <PackageCertificateThumbprint>3FB0ED557DA8EC6168B4A4ACCFF399AABB249CF1</PackageCertificateThumbprint>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppxManifest Include="package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <Content Include="css\magnifier.css" />
+    <Content Include="default.html" />
+    <Content Include="images\BadgeLogo.scale-180.png" />
+    <Content Include="images\bmp-logo.jpg" />
+    <Content Include="images\icons\appbar.add.png" />
+    <Content Include="images\icons\Plus-Add.png" />
+    <Content Include="images\jpeg-logo.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\simpleOCRHeader.png" />
+    <Content Include="images\simpleOCRStoreLogo.png" />
+    <Content Include="images\smalllogo.png" />
+    <Content Include="images\smallLogo2.png" />
+    <Content Include="images\spashScreen.png" />
+    <Content Include="images\splashscreen.png" />
+    <Content Include="images\storelogo.png" />
+    <Content Include="images\sun-logo-bitmap-yellow.JPG" />
+    <Content Include="js\api\ocrService.js" />
+    <Content Include="js\client\commands\documentManager.js" />
+    <Content Include="js\client\commands\eventWizard.js" />
+    <Content Include="js\client\commands\filePickerWizard.js" />
+    <Content Include="js\client\commands\initUIElements.js" />
+    <Content Include="js\client\connections\internetAccessManager.js" />
+    <Content Include="js\client\contrancts\initShareContract.js" />
+    <Content Include="js\client\globalErrorHanlding\errorHandler.js" />
+    <Content Include="js\client\MVVM\models\picture.js" />
+    <Content Include="js\client\MVVM\models\outputText.js" />
+    <Content Include="js\client\MVVM\viewModels\default.js" />
+    <Content Include="js\client\notifications\notification.js" />
+    <Content Include="js\client\sessionStorage\sessionHanlderWizard.js" />
+    <Content Include="js\client\ui-vm-bridge\ui-vm-bridge.js" />
+    <Content Include="js\default.js" />
+    <Content Include="css\default.css" />
+    <Content Include="js\libs\jspdf.min.js" />
+    <Content Include="js\libs\magnifier.js" />
+    <None Include="Sample_StoreKey.pfx" />
+    <None Include="Package.StoreAssociation.xml" />
+    <Content Include="privacy\privacy.html" />
+    <None Include="Sample_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.WinJS.1.0, Version=1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="js\client\backgroundTasks\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
+  <!-- To modify your build process, add your task inside one of the targets below then uncomment
+       that target and the DisableFastUpToDateCheck PropertyGroup. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <PropertyGroup>
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+  </PropertyGroup>
+  -->
+</Project>
